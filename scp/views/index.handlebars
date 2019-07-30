@@ -1,0 +1,25 @@
+<h1 class="text-center mb-3">Welcome {{user.title}} To the SCP Foundation Database</h1>
+<div class="container mt-4">
+    <p>You are logged in as {{user.name}}. Your information is listed below.</p>
+    <ul class="list-group">
+        
+            <li class="list-group-item">Title: {{user.title}}</li>
+            <li class="list-group-item">Access Level: {{user.access}}</li>
+            <li class="list-group-item">Email: {{user.email}}</li>
+            <li class="list-group-item">Status: {{user.status}}</li>
+
+    </ul>
+    <a href="/auth" class="btn btn-dark mt-4">Authenticate</a>
+</div>
+<div class="container mt-4">
+    <p>There are {{personnel.length}} registered users in the Foundation. </p>
+    <ul class="list-group">
+        {{#each personnel}}
+            <li class="list-group-item"><b>{{this.name}}</b></li>
+            <li class="list-group-item">{{this.title}}</li>
+            <li class="list-group-item">{{this.status}}</li>
+        {{/each}}
+
+    </ul>
+
+</div>
