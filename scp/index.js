@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Homepage Route
-const user= personnel[3];
+var user= personnel[3];
 app.get('/', (req, res) =>
   res.render('index', {
     title: 'SCP Foundata',
@@ -30,13 +30,15 @@ app.get('/about', (req, res) =>
 //Log In
 app.get('/auth', (req, res) =>
   res.render('misc/auth', {
-    title: 'SCP Foundata-Authenicate',
-    personnel
+    title: 'SCP Foundata-Authenticate',
+    personnel,
+    user
   })
 );
 // Set static folder
 app.use(express.static(path.join(__dirname, '/views/public')));
-
+//Use test api scripts
+app.use('/api/midtest', require('./api/midtest'));
 const PORT = process.env.PORT || 6707;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
