@@ -1,11 +1,11 @@
 <h4>Please Select User</h4>
-<form action="/" method="GET" class="mb-4">
+<form action="/api/midtest" method="GET" class="mb-4">
 {{#each personnel}}
 <ul class="list-unstyled">
   
-  <li><input type="radio" name="person" value="{{this.id}}">{{this.name}}</li>
+  <li><input type="radio" name="person" value={{this.id}}>{{this.name}}</li>
     
 </ul>
 {{/each}}
-<input type="submit" value="changeUser" class="btn btn-primary btn-block">
+<input type="submit" value="Select User" class="btn btn-primary btn-block">
 </form>
