@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon index",
+    "dev": "open-cli http://localhost:6707 -- chrome & nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brian Murphy",
@@ -14,6 +14,8 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.0.1",
     "moment": "^2.24.0",
+    "open": "^6.4.0",
+    "open-cli": "^5.0.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
