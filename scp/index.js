@@ -38,6 +38,8 @@ app.get('/auth', (req, res) =>
 );
 // Set static folder
 app.use(express.static(path.join(__dirname, '/views/public')));
+//app.use(favicon(path.join(__dirname,'views','public','images','favicon.ico')));
+
 //Use test api scripts
 app.use('/api/midtest', require('./api/midtest'));
 

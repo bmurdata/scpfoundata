@@ -3,7 +3,9 @@
 {{#each personnel}}
 <ul class="list-unstyled">
   
-  <li><input type="radio" name="person" value={{this.id}}>{{this.name}}</li>
+  <li><input type="radio" id={{this.id}} name="person" value={{this.id}}>
+  <label for={{this.id}}>{{this.name}}</label>
+</li>
     
 </ul>
 {{/each}}
