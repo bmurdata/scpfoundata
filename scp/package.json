@@ -11,7 +11,7 @@
   "author": "Brian Murphy",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "express-handlebars": "^3.0.1",
     "moment": "^2.24.0",
     "open": "^6.4.0",
